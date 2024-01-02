@@ -6,8 +6,8 @@ import (
 	"math"
 	"testing/quick"
 
-	"github.com/renproject/multichain/chain/kava"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/chain/kava"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"

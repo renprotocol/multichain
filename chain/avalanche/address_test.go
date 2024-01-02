@@ -7,8 +7,8 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/renproject/multichain/chain/avalanche"
 	"github.com/renproject/surge"
+	"github.com/renprotocol/multichain/chain/avalanche"
 )
 
 var _ = Describe("Address", func() {

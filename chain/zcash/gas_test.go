@@ -3,8 +3,8 @@ package zcash_test
 import (
 	"context"
 
-	"github.com/renproject/multichain/chain/zcash"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/chain/zcash"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

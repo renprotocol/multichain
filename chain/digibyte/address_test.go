@@ -1,9 +1,9 @@
 package digibyte_test
 
 import (
-	"github.com/renproject/multichain/api/address"
-	"github.com/renproject/multichain/chain/bitcoin"
-	"github.com/renproject/multichain/chain/digibyte"
+	"github.com/renprotocol/multichain/api/address"
+	"github.com/renprotocol/multichain/chain/bitcoin"
+	"github.com/renprotocol/multichain/chain/digibyte"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

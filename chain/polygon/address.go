@@ -1,7 +1,7 @@
 package polygon
 
 import (
-	"github.com/renproject/multichain/chain/evm"
+	"github.com/renprotocol/multichain/chain/evm"
 )
 
 type (

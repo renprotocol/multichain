@@ -3,8 +3,8 @@ package bitcoin_test
 import (
 	"context"
 
-	"github.com/renproject/multichain/chain/bitcoin"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/chain/bitcoin"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

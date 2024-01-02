@@ -6,7 +6,7 @@ import (
 	"math"
 	"testing/quick"
 
-	"github.com/renproject/multichain/chain/avalanche"
+	"github.com/renprotocol/multichain/chain/avalanche"
 
 	"github.com/renproject/pack"
 

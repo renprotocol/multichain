@@ -6,7 +6,7 @@ import (
 	"math"
 	"testing/quick"
 
-	"github.com/renproject/multichain/chain/polygon"
+	"github.com/renprotocol/multichain/chain/polygon"
 
 	"github.com/renproject/pack"
 

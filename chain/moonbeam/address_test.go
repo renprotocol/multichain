@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"testing/quick"
 
-	"github.com/renproject/multichain/chain/moonbeam"
 	"github.com/renproject/surge"
+	"github.com/renprotocol/multichain/chain/moonbeam"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -1,7 +1,7 @@
 package fantom
 
 import (
-	"github.com/renproject/multichain/chain/evm"
+	"github.com/renprotocol/multichain/chain/evm"
 )
 
 // GasEstimator re-exports evm.GasEstimator.

@@ -5,11 +5,11 @@ import (
 	"crypto/sha256"
 	"fmt"
 
+	"github.com/btcsuite/btcd/btcutil"
+	"github.com/btcsuite/btcd/btcutil/base58"
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/btcsuite/btcutil"
-	"github.com/btcsuite/btcutil/base58"
-	"github.com/renproject/multichain/api/address"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/api/address"
 	"golang.org/x/crypto/ripemd160"
 )
 

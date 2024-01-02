@@ -6,7 +6,7 @@ import (
 	"math"
 	"testing/quick"
 
-	"github.com/renproject/multichain/chain/arbitrum"
+	"github.com/renprotocol/multichain/chain/arbitrum"
 
 	"github.com/renproject/pack"
 

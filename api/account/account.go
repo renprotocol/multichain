@@ -7,9 +7,9 @@ import (
 	"context"
 
 	"github.com/renproject/id"
-	"github.com/renproject/multichain/api/address"
-	"github.com/renproject/multichain/api/contract"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/api/address"
+	"github.com/renprotocol/multichain/api/contract"
 )
 
 // The Tx interfaces defines the functionality that must be exposed by
