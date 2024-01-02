@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"testing/quick"
 
-	"github.com/renproject/multichain/chain/kava"
 	"github.com/renproject/surge"
+	"github.com/renprotocol/multichain/chain/kava"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

@@ -9,11 +9,11 @@ import (
 
 	"github.com/btcsuite/btcd/btcutil"
 	"github.com/renproject/id"
-	"github.com/renproject/multichain/api/address"
-	"github.com/renproject/multichain/api/utxo"
-	"github.com/renproject/multichain/chain/bitcoin"
-	"github.com/renproject/multichain/chain/digibyte"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/api/address"
+	"github.com/renprotocol/multichain/api/utxo"
+	"github.com/renprotocol/multichain/chain/bitcoin"
+	"github.com/renprotocol/multichain/chain/digibyte"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

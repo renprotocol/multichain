@@ -1,6 +1,6 @@
 package digibyte
 
-import "github.com/renproject/multichain/chain/bitcoin"
+import "github.com/renprotocol/multichain/chain/bitcoin"
 
 // AddressEncoder encapsulates the chain specific configurations and implements
 // the address.Encoder interface

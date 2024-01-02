@@ -9,8 +9,8 @@ import (
 	"github.com/btcsuite/btcd/chaincfg"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/renproject/multichain/api/address"
-	"github.com/renproject/multichain/chain/bitcoincash"
+	"github.com/renprotocol/multichain/api/address"
+	"github.com/renprotocol/multichain/chain/bitcoincash"
 )
 
 var _ = Describe("Bitcoin Cash", func() {

@@ -3,8 +3,8 @@ package dogecoin_test
 import (
 	"context"
 
-	"github.com/renproject/multichain/chain/dogecoin"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/chain/dogecoin"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

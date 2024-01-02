@@ -1,7 +1,7 @@
 package optimism
 
 import (
-	"github.com/renproject/multichain/chain/evm"
+	"github.com/renprotocol/multichain/chain/evm"
 )
 
 // Payload re-exports evm.Payload.

@@ -13,9 +13,9 @@ import (
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/txscript"
 	"github.com/btcsuite/btcd/wire"
-	"github.com/renproject/multichain/api/utxo"
-	"github.com/renproject/multichain/chain/bitcoin"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/api/utxo"
+	"github.com/renprotocol/multichain/chain/bitcoin"
 )
 
 // Version of Zcash transactions supported by the multichain.
@@ -59,9 +59,9 @@ func NewTxBuilder(params *Params, expiryHeight uint32) utxo.TxBuilder {
 // It is assumed that the required signature scripts require the SIGHASH_ALL
 // signatures and the serialized public key:
 //
-//  builder := txscript.NewScriptBuilder()
-//  builder.AddData(append(signature.Serialize(), byte(txscript.SigHashAll|SighashForkID)))
-//  builder.AddData(serializedPubKey)
+//	builder := txscript.NewScriptBuilder()
+//	builder.AddData(append(signature.Serialize(), byte(txscript.SigHashAll|SighashForkID)))
+//	builder.AddData(serializedPubKey)
 //
 // Outputs produced for recipients will use P2PKH, or P2SH scripts as the pubkey
 // script, based on the format of the recipient address.

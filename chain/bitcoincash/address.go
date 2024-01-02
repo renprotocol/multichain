@@ -9,8 +9,8 @@ import (
 	"github.com/btcsuite/btcd/btcutil/base58"
 	"github.com/btcsuite/btcd/btcutil/bech32"
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/renproject/multichain/api/address"
 	"github.com/renproject/pack"
+	"github.com/renprotocol/multichain/api/address"
 	"golang.org/x/crypto/ripemd160"
 )
 
@@ -421,19 +421,19 @@ func AddressPrefix(params *chaincfg.Params) string {
 // PolyMod is used to calculate the checksum for Bitcoin Cash
 // addresses.
 //
-//  uint64_t PolyMod(const data &v) {
-//      uint64_t c = 1;
-//      for (uint8_t d : v) {
-//          uint8_t c0 = c >> 35;
-//          c = ((c & 0x07ffffffff) << 5) ^ d;
-//          if (c0 & 0x01) c ^= 0x98f2bc8e61;
-//          if (c0 & 0x02) c ^= 0x79b76d99e2;
-//          if (c0 & 0x04) c ^= 0xf33e5fb3c4;
-//          if (c0 & 0x08) c ^= 0xae2eabe2a8;
-//          if (c0 & 0x10) c ^= 0x1e4f43e470;
-//      }
-//      return c ^ 1;
-//  }
+//	uint64_t PolyMod(const data &v) {
+//	    uint64_t c = 1;
+//	    for (uint8_t d : v) {
+//	        uint8_t c0 = c >> 35;
+//	        c = ((c & 0x07ffffffff) << 5) ^ d;
+//	        if (c0 & 0x01) c ^= 0x98f2bc8e61;
+//	        if (c0 & 0x02) c ^= 0x79b76d99e2;
+//	        if (c0 & 0x04) c ^= 0xf33e5fb3c4;
+//	        if (c0 & 0x08) c ^= 0xae2eabe2a8;
+//	        if (c0 & 0x10) c ^= 0x1e4f43e470;
+//	    }
+//	    return c ^ 1;
+//	}
 //
 // https://github.com/bitcoincashorg/bitcoincash.org/blob/master/spec/cashaddr.md
 func PolyMod(v []byte) uint64 {

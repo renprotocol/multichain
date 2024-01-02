@@ -3,12 +3,12 @@
 package multichain
 
 import (
-	"github.com/renproject/multichain/api/account"
-	"github.com/renproject/multichain/api/address"
-	"github.com/renproject/multichain/api/contract"
-	"github.com/renproject/multichain/api/gas"
-	"github.com/renproject/multichain/api/utxo"
 	"github.com/renproject/surge"
+	"github.com/renprotocol/multichain/api/account"
+	"github.com/renprotocol/multichain/api/address"
+	"github.com/renprotocol/multichain/api/contract"
+	"github.com/renprotocol/multichain/api/gas"
+	"github.com/renprotocol/multichain/api/utxo"
 )
 
 type (

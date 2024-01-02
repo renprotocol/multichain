@@ -1,6 +1,6 @@
 package digibyte
 
-import "github.com/renproject/multichain/chain/bitcoin"
+import "github.com/renprotocol/multichain/chain/bitcoin"
 
 type (
 	// Tx represents a simple Bitcoin transaction that implements the Bitcoin Compat

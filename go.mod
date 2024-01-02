@@ -1,4 +1,4 @@
-module github.com/renproject/multichain
+module github.com/renprotocol/multichain
 
 go 1.21
 

@@ -9,8 +9,8 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil"
-	"github.com/renproject/multichain/api/address"
-	"github.com/renproject/multichain/chain/zcash"
+	"github.com/renprotocol/multichain/api/address"
+	"github.com/renprotocol/multichain/chain/zcash"
 )
 
 var _ = Describe("Zcash Address", func() {

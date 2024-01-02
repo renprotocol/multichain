@@ -1,6 +1,6 @@
 package dogecoin
 
-import "github.com/renproject/multichain/chain/bitcoin"
+import "github.com/renprotocol/multichain/chain/bitcoin"
 
 type (
 	// AddressEncoder re-exports bitcoin.AddressEncoder.
