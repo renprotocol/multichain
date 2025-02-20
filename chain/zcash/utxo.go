@@ -385,7 +385,7 @@ func calculateSighash(
 
 	// << hashOutputs
 	// If the current signature mode isn't single, or none, then we can
-	// re-use the pre-generated hashoutputs sighash fragment. Otherwise,
+	// reuse the pre-generated hashoutputs sighash fragment. Otherwise,
 	// we'll serialize and add only the target output index to the signature
 	// pre-image.
 	if hashType&sighashMask != txscript.SigHashSingle && hashType&sighashMask != txscript.SigHashNone {
@@ -527,9 +527,9 @@ func txSighashes(tx *wire.MsgTx) (h *txscript.TxSigHashes, err error) {
 
 // calculateHashPrevOuts calculates a single hash of all the previous
 // outputs (txid:index) referenced within the passed transaction. This
-// calculated hash can be re-used when validating all inputs spending segwit
+// calculated hash can be reused when validating all inputs spending segwit
 // outputs, with a signature hash type of SigHashAll. This allows validation to
-// re-use previous hashing computation, reducing the complexity of validating
+// reuse previous hashing computation, reducing the complexity of validating
 // SigHashAll inputs from  O(N^2) to O(N).
 func calculateHashPrevOuts(tx *wire.MsgTx) (chainhash.Hash, error) {
 	var b bytes.Buffer
@@ -551,9 +551,9 @@ func calculateHashPrevOuts(tx *wire.MsgTx) (chainhash.Hash, error) {
 
 // calculateHashSequence computes an aggregated hash of each of the
 // sequence numbers within the inputs of the passed transaction. This single
-// hash can be re-used when validating all inputs spending segwit outputs, which
+// hash can be reused when validating all inputs spending segwit outputs, which
 // include signatures using the SigHashAll sighash type. This allows validation
-// to re-use previous hashing computation, reducing the complexity of validating
+// to reuse previous hashing computation, reducing the complexity of validating
 // SigHashAll inputs from O(N^2) to O(N).
 func calculateHashSequence(tx *wire.MsgTx) (chainhash.Hash, error) {
 	var b bytes.Buffer
@@ -568,7 +568,7 @@ func calculateHashSequence(tx *wire.MsgTx) (chainhash.Hash, error) {
 
 // calculateHashOutputs computes a hash digest of all outputs created by
 // the transaction encoded using the wire format. This single hash can be
-// re-used when validating all inputs spending witness programs, which include
+// reused when validating all inputs spending witness programs, which include
 // signatures using the SigHashAll sighash type. This allows computation to be
 // cached, reducing the total hashing complexity from O(N^2) to O(N).
 func calculateHashOutputs(tx *wire.MsgTx) (_ chainhash.Hash, err error) {
