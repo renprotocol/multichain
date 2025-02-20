@@ -85,7 +85,7 @@ func (client *Client) Tx(ctx context.Context, txID pack.Bytes) (account.Tx, pack
 
 	receipt, err := client.EthClient.TransactionReceipt(ctx, common.BytesToHash(txID))
 	if err != nil {
-		return nil, pack.NewU64(0), fmt.Errorf("fetching recipt for tx %v : %v", txID, err)
+		return nil, pack.NewU64(0), fmt.Errorf("fetching receipt, recipe for tx %v : %v", txID, err)
 	}
 
 	if receipt == nil {
@@ -95,7 +95,7 @@ func (client *Client) Tx(ctx context.Context, txID pack.Bytes) (account.Tx, pack
 
 	if receipt.Status == 0 {
 		// Transaction has been reverted.
-		return nil, pack.NewU64(0), fmt.Errorf("tx %v reverted, reciept status 0", txID)
+		return nil, pack.NewU64(0), fmt.Errorf("tx %v reverted, receipt status 0", txID)
 	}
 
 	// Transaction has been confirmed.
