@@ -104,9 +104,9 @@ func (decoder AddressDecoder) DecodeAddress(addr address.Address) (address.RawAd
 		case *btcutil.AddressPubKeyHash, *btcutil.AddressScriptHash, *btcutil.AddressPubKey:
 			return decodeLegacyAddress(addr, decoder.params)
 		case *btcutil.AddressWitnessPubKeyHash, *btcutil.AddressWitnessScriptHash:
-			return nil, fmt.Errorf("unsuported segwit bitcoin address type %T", legacyAddr)
+			return nil, fmt.Errorf("unsupported segwit bitcoin address type %T", legacyAddr)
 		default:
-			return nil, fmt.Errorf("unsuported legacy bitcoin address type %T", legacyAddr)
+			return nil, fmt.Errorf("unsupported legacy bitcoin address type %T", legacyAddr)
 		}
 	}
 
