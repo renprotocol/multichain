@@ -3,6 +3,7 @@ package bitcoin
 import (
 	"bytes"
 	"fmt"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/btcsuite/btcd/btcutil"
@@ -223,6 +224,11 @@ func (tx *Tx) Sign(signatures []pack.Bytes65, pubKey pack.Bytes) error {
 
 	tx.signed = true
 	return nil
+}
+
+// SetLockTime sets the locktime of the underlying transaction.
+func (tx *Tx) SetLockTime(lockTime uint32) {
+	tx.msgTx.LockTime = lockTime
 }
 
 // Serialize serializes the UTXO transaction to bytes
