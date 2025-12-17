@@ -4,10 +4,10 @@ jobs:
   test-zcash:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.21
+      - name: Set up Go 1.25
         uses: actions/setup-go@v5
         with:
-          go-version: "1.21"
+          go-version: "1.25"
         id: go
 
       - name: Check out code into the Go module directory
@@ -73,10 +73,10 @@ jobs:
   test-dogecoin:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.21
+      - name: Set up Go 1.25
         uses: actions/setup-go@v5
         with:
-          go-version: "1.21"
+          go-version: "1.25"
         id: go
 
       - name: Check out code into the Go module directory
@@ -142,10 +142,10 @@ jobs:
   test-btc:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.21
+      - name: Set up Go 1.25
         uses: actions/setup-go@v5
         with:
-          go-version: "1.21"
+          go-version: "1.25"
         id: go
 
       - name: Check out code into the Go module directory
@@ -211,10 +211,10 @@ jobs:
   test-avax:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.21
+      - name: Set up Go 1.25
         uses: actions/setup-go@v5
         with:
-          go-version: "1.21"
+          go-version: "1.25"
         id: go
 
       - name: Check out code into the Go module directory
@@ -279,10 +279,10 @@ jobs:
   test-ftm:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.21
+      - name: Set up Go 1.25
         uses: actions/setup-go@v5
         with:
-          go-version: "1.21"
+          go-version: "1.25"
         id: go
 
       - name: Check out code into the Go module directory
@@ -347,10 +347,10 @@ jobs:
   test-polygon:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.21
+      - name: Set up Go 1.25
         uses: actions/setup-go@v5
         with:
-          go-version: "1.21"
+          go-version: "1.25"
         id: go
 
       - name: Check out code into the Go module directory
@@ -415,10 +415,10 @@ jobs:
   test-bsc:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.21
+      - name: Set up Go 1.25
         uses: actions/setup-go@v5
         with:
-          go-version: "1.21"
+          go-version: "1.25"
         id: go
 
       - name: Check out code into the Go module directory
@@ -483,10 +483,10 @@ jobs:
   test-eth:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Go 1.21
+      - name: Set up Go 1.25
         uses: actions/setup-go@v5
         with:
-          go-version: "1.21"
+          go-version: "1.25"
         id: go
 
       - name: Check out code into the Go module directory
