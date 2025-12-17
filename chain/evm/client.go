@@ -57,7 +57,7 @@ func (client *Client) LatestBlock(ctx context.Context) (pack.U64, error) {
 func (client *Client) Tx(ctx context.Context, txID pack.Bytes) (account.Tx, pack.U64, error) {
 	tx, pending, err := client.EthClient.TransactionByHash(ctx, common.BytesToHash(txID))
 	if err != nil {
-		return nil, pack.NewU64(0), fmt.Errorf(fmt.Sprintf("fetching tx by hash '%v': %v", txID, err))
+		return nil, pack.NewU64(0), fmt.Errorf("fetching tx by hash '%v': %w", txID, err)
 	}
 
 	// Check the chain id for replay-protected tx.
@@ -118,7 +118,7 @@ func (client *Client) SubmitTx(ctx context.Context, tx account.Tx) error {
 	case *Tx:
 		err := client.EthClient.SendTransaction(ctx, tx.EthTx)
 		if err != nil {
-			return fmt.Errorf(fmt.Sprintf("sending transaction '%v': %v", tx.Hash(), err))
+			return fmt.Errorf("sending transaction '%v': %w", tx.Hash(), err)
 		}
 		return nil
 	default:
