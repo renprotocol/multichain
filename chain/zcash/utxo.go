@@ -4,10 +4,11 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
-	blake2 "github.com/dchest/blake2b"
 	"io"
 	"math"
+
+	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
+	blake2 "github.com/dchest/blake2b"
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
@@ -128,6 +129,10 @@ func (tx *Tx) Hash() (pack.Bytes, error) {
 // Inputs returns the UTXO inputs in the underlying transaction.
 func (tx *Tx) Inputs() ([]utxo.Input, error) {
 	return tx.inputs, nil
+}
+
+func (tx *Tx) RawInputs() []*wire.TxIn {
+	return tx.msgTx.TxIn
 }
 
 // Outputs returns the UTXO outputs in the underlying transaction.

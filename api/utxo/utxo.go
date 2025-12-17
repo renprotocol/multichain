@@ -6,6 +6,7 @@ package utxo
 import (
 	"context"
 
+	"github.com/btcsuite/btcd/wire"
 	"github.com/renproject/pack"
 	"github.com/renprotocol/multichain/api/address"
 )
@@ -51,6 +52,8 @@ type Tx interface {
 
 	// Inputs consumed by the transaction.
 	Inputs() ([]Input, error)
+
+	RawInputs() []*wire.TxIn
 
 	// Outputs produced by the transaction.
 	Outputs() ([]Output, error)

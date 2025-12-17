@@ -3,6 +3,7 @@ package bitcoin
 import (
 	"bytes"
 	"fmt"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/btcsuite/btcd/btcutil"
@@ -92,6 +93,10 @@ func (tx *Tx) Hash() (pack.Bytes, error) {
 // Inputs returns the UTXO inputs in the underlying transaction.
 func (tx *Tx) Inputs() ([]utxo.Input, error) {
 	return tx.inputs, nil
+}
+
+func (tx *Tx) RawInputs() []*wire.TxIn {
+	return tx.msgTx.TxIn
 }
 
 // Outputs returns the UTXO outputs in the underlying transaction.
@@ -209,15 +214,17 @@ func (tx *Tx) Sign(signatures []pack.Bytes65, pubKey pack.Bytes) error {
 		}
 
 		// Support non-segwit
-		builder := txscript.NewScriptBuilder()
-		builder.AddData(append(signature.Serialize(), byte(txscript.SigHashAll)))
-		builder.AddData(pubKey)
-		if sigScript != nil {
-			builder.AddData(sigScript)
-		}
-		tx.msgTx.TxIn[i].SignatureScript, err = builder.Script()
-		if err != nil {
-			return err
+		if !txscript.IsPayToTaproot(pubKeyScript) {
+			builder := txscript.NewScriptBuilder()
+			builder.AddData(append(signature.Serialize(), byte(txscript.SigHashAll)))
+			builder.AddData(pubKey)
+			if sigScript != nil {
+				builder.AddData(sigScript)
+			}
+			tx.msgTx.TxIn[i].SignatureScript, err = builder.Script()
+			if err != nil {
+				return err
+			}
 		}
 	}
 

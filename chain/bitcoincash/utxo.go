@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
 	"github.com/btcsuite/btcd/chaincfg"
@@ -129,6 +130,10 @@ func (tx *Tx) Hash() (pack.Bytes, error) {
 // the multichain.UTXOTx interface
 func (tx *Tx) Inputs() ([]utxo.Input, error) {
 	return tx.inputs, nil
+}
+
+func (tx *Tx) RawInputs() []*wire.TxIn {
+	return tx.msgTx.TxIn
 }
 
 // Outputs returns the UTXO outputs in the underlying transaction. It implements
