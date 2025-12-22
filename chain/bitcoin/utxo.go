@@ -232,6 +232,11 @@ func (tx *Tx) Sign(signatures []pack.Bytes65, pubKey pack.Bytes) error {
 	return nil
 }
 
+// SetLockTime sets the locktime of the underlying transaction.
+func (tx *Tx) SetLockTime(lockTime uint32) {
+	tx.msgTx.LockTime = lockTime
+}
+
 // Serialize serializes the UTXO transaction to bytes
 func (tx *Tx) Serialize() (pack.Bytes, error) {
 	buf := new(bytes.Buffer)
