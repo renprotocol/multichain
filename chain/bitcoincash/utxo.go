@@ -301,7 +301,7 @@ func CalculateBip143Sighash(subScript []byte, sigHashes *txscript.TxSigHashes, h
 	sigHash.Write(bSequence[:])
 
 	// If the current signature mode isn't single, or none, then we can
-	// re-use the pre-generated hashoutputs sighash fragment. Otherwise,
+	// reuse the pre-generated hashoutputs sighash fragment. Otherwise,
 	// we'll serialize and add only the target output index to the signature
 	// pre-image.
 	if hashType&SighashMask != txscript.SigHashSingle &&

@@ -19,7 +19,7 @@ type AddressDecoder interface {
 
 type addressDecoder struct{}
 
-// NewAddressDecoder returns the default AddressDecoder for Substract chains. It
+// NewAddressDecoder returns the default AddressDecoder for Subtract chains. It
 // uses the Bitcoin base58 alphabet to decode the string, and interprets the
 // result as a 2-byte address type, 32-byte array, and 1-byte checksum.
 func NewAddressDecoder() AddressDecoder {
